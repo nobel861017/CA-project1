@@ -18,8 +18,8 @@ input  [31 : 0] mem_i;
 output [31 : 0] mem_o;
 input  [31 : 0] ALUResult_i;
 output [31 : 0] ALUResult_o;
-input  [31 : 0] RDaddr_i;
-output [31 : 0] RDaddr_o;
+input  [4 : 0]  RDaddr_i;
+output [4 : 0]  RDaddr_o;
 input           RegWrite_i;
 output          RegWrite_o;
 input           MemtoReg_i;
@@ -27,7 +27,7 @@ output          MemtoReg_o;
 
 reg    [31 : 0] mem_reg;
 reg    [31 : 0] ALUResult_reg;
-reg    [31 : 0] RDaddr_reg;
+reg    [4 : 0]  RDaddr_reg;
 reg             RegWrite_reg;
 reg             MemtoReg_reg;
    

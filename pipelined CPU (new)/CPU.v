@@ -55,7 +55,7 @@ Adder Add_PC
 
 Adder Add_PC_branch
 (
-    .data1_i    (inst_addr),
+    .data1_i    (IF_ID.PC_o),
     .data2_i    (Sign_Extend.data_o << 1),
     .data_o     (MUX_PC.data2_i)
 );
@@ -73,7 +73,7 @@ MUX32 MUX_PC
 Instruction_Memory Instruction_Memory
 (
     .addr_i     (inst_addr), 
-    .instr_o    (inst)
+    .instr_o    (IF_ID.inst_i)
 );
 
 Registers Registers
@@ -127,6 +127,15 @@ MUX32 MUX_MemtoReg
     .data2_i    (Data_Memory.data_o),
     .select_i   (Control.MemtoReg_o),
     .data_o     (Registers.RDdata_i)
+);
+
+IF_ID IF_ID
+(
+	.clk_i  (clk_i),
+	.PC_i   (inst_addr),
+	.PC_o   (Add_PC_branch.data1_i),
+	.inst_i (Instruction_Memory.instr_o),
+	.inst_o (inst)
 );
 
 endmodule
