@@ -113,7 +113,7 @@ ALU ALU
 
 Data_Memory Data_Memory
 (
-    .clk        (clk),
+    .clk_i      (clk_i),
     .MemWrite_i (Control.MemWrite_o),
     .MemRead_i  (Control.MemRead_o),
     .addr_i     (ALU_result),
