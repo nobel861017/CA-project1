@@ -4,7 +4,7 @@ module IF_ID
 	PC_i,
 	PC_o,
 	inst_i,
-	inst_o,
+	inst_o
 );
 
 input           clk_i;

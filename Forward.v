@@ -10,10 +10,10 @@ module Forward
 	select2_o
 );
 
-input  [31 : 0] ID_EX_RSaddr_i;
-input  [31 : 0] ID_EX_RTaddr_i;
-input  [31 : 0] EX_MEM_RDaddr_i;
-input  [31 : 0] MEM_WB_RDaddr_i;
+input  [6 : 0]  ID_EX_RSaddr_i;
+input  [6 : 0]  ID_EX_RTaddr_i;
+input  [6 : 0]  EX_MEM_RDaddr_i;
+input  [6 : 0]  MEM_WB_RDaddr_i;
 input           EX_MEM_RegWrite_i;
 input           MEM_WB_RegWrite_i;
 output [1 : 0]  select1_o;

@@ -89,7 +89,7 @@ always@(posedge Clk) begin
     $fdisplay(outfile, "Data Memory: 0x1c = %d", {CPU.Data_Memory.memory[31], CPU.Data_Memory.memory[30], CPU.Data_Memory.memory[29], CPU.Data_Memory.memory[28]});
 
     $fdisplay(outfile, "\n");
-    
+
     counter = counter + 1;
 end
 

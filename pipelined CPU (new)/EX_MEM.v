@@ -47,7 +47,7 @@ output          MemtoReg_o;
 
 reg    [31 : 0] sum_reg;
 reg    [31 : 0] ALUResult_reg;
-reg    [31 : 0] zero_reg;
+reg             zero_reg;
 reg    [31 : 0] RTdata_reg;
 reg    [4 : 0]  RDaddr_reg;
 reg             Branch_reg;

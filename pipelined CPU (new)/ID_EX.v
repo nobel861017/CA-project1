@@ -3,6 +3,8 @@ module ID_EX
     clk_i,
     PC_i,
     PC_o,
+    inst_i,
+    inst_o,
     RSdata_i,
     RSdata_o,
     RTdata_i,
@@ -30,6 +32,8 @@ module ID_EX
 input           clk_i;
 input  [31 : 0] PC_i;
 output [31 : 0] PC_o;
+input  [31 : 0] inst_i;
+output [31 : 0] inst_o;
 input  [31 : 0] RSdata_i;
 output [31 : 0] RSdata_o;
 input  [31 : 0] RTdata_i;
@@ -54,6 +58,7 @@ input           MemtoReg_i;
 output          MemtoReg_o;
 
 reg    [31 : 0] PC_reg;
+reg    [31 : 0] inst_reg;
 reg    [31 : 0] RSdata_reg;
 reg    [31 : 0] RTdata_reg;
 reg    [31 : 0] imm_reg;
@@ -67,6 +72,7 @@ reg             RegWrite_reg;
 reg             MemtoReg_reg;
    
 assign PC_o = PC_reg;
+assign inst_o = inst_reg;
 assign RSdata_o = RSdata_reg;
 assign RTdata_o = RTdata_reg;
 assign imm_o = imm_reg;
@@ -79,9 +85,10 @@ assign MemWrite_o = MemWrite_reg;
 assign RegWrite_o = RegWrite_reg;
 assign MemtoReg_o = MemtoReg_reg;
  
-always@(posedge clk_i)
+always @(posedge clk_i)
     begin
         PC_reg <= PC_i;
+        inst_reg <= inst_i;
         RSdata_reg <= RSdata_i;
         RTdata_reg <= RTdata_i;
         imm_reg <= imm_i;
