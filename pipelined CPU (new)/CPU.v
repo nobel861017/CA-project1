@@ -61,13 +61,18 @@ Adder Add_PC_branch
     .data_o     (EX_MEM.sum_i)
 );
 
-and And(taken , branch , zero);
+And And
+(
+    .data1_i    (branch),
+    .data2_i    (zero),
+    .data_o     (taken)
+);
 
 MUX32 MUX_PC
 (
     .data1_i    (Add_PC.data_o),
     .data2_i    (EX_MEM.sum_o),
-    .select_i   (1'b0 /*taken*/),
+    .select_i   (taken),
     .data_o     (PC.pc_i)
 );
 
