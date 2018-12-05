@@ -1,4 +1,4 @@
-module Control
+module MUX_Control
 (
     select_i,
     ALUOp_i,
@@ -33,7 +33,7 @@ output         RegWrite_o;
 input          MemtoReg_i;
 output         MemtoReg_o;
 
-assign ALUOp_o = (select_i == 1'b0)? ALUOp_i : 2'b0;
+assign ALUOp_o = (select_i == 1'b0)? ALUOp_i : 2'b00;
 assign ALUSrc_o = (select_i == 1'b0)? ALUSrc_i : 1'b0;
 assign Branch_o = (select_i == 1'b0)? Branch_i : 1'b0;
 assign MemRead_o = (select_i == 1'b0)? MemRead_i : 1'b0;
