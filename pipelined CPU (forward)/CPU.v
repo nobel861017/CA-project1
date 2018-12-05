@@ -15,9 +15,13 @@ wire [31 : 0] inst_addr;
 wire          branch;
 wire          zero;
 wire          taken;
-wire [31 : 0] RTdata;
 wire [31 : 0] imm;
 wire [31 : 0] ALU_result;
+wire [31 : 0] RTdata;
+wire [4 : 0]  EX_MEM_RDaddr;
+wire [4 : 0]  MEM_WB_RDaddr;
+wire          EX_MEM_RegWrite;
+wire          MEM_WB_RegWrite;
 
 Control Control
 (
@@ -87,9 +91,9 @@ Registers Registers
     .clk_i      (clk_i),
     .RSaddr_i   (inst[19 : 15]),
     .RTaddr_i   (inst[24 : 20]),
-    .RDaddr_i   (MEM_WB.RDaddr_o), 
+    .RDaddr_i   (MEM_WB_RDaddr), 
     .RDdata_i   (MUX_MemtoReg.data_o),
-    .RegWrite_i (MEM_WB.RegWrite_o), 
+    .RegWrite_i (MEM_WB_RegWrite), 
     .RSdata_o   (ID_EX.RSdata_i),
     .RTdata_o   (ID_EX.RTdata_i) 
 );
@@ -113,7 +117,7 @@ MUX3 MUX_ALU_data1
 	.data1_i  (),
 	.data2_i  (),
 	.data3_i  (),
-	.select_i (),
+	.select_i (Forward.select1_o),
 	.data_o   ()
 );
 
@@ -122,7 +126,7 @@ MUX3 MUX_ALU_data2
 	.data1_i  (),
 	.data2_i  (),
 	.data3_i  (),
-	.select_i (),
+	.select_i (Forward.select2_o),
 	.data_o   ()
 );
 
@@ -209,7 +213,7 @@ EX_MEM EX_MEM
     .RTdata_i    (RTdata),
     .RTdata_o    (Data_Memory.data_i),
     .RDaddr_i    (ID_EX.RDaddr_o),
-    .RDaddr_o    (MEM_WB.RDaddr_i),
+    .RDaddr_o    (EX_MEM_RDaddr),
     .Branch_i    (ID_EX.Branch_o),
     .Branch_o    (branch),
     .MemRead_i   (ID_EX.MemRead_o),
@@ -217,7 +221,7 @@ EX_MEM EX_MEM
     .MemWrite_i  (ID_EX.MemWrite_o),
     .MemWrite_o  (Data_Memory.MemWrite_i),
     .RegWrite_i  (ID_EX.RegWrite_o),
-    .RegWrite_o  (MEM_WB.RegWrite_i),
+    .RegWrite_o  (EX_MEM_RegWrite),
     .MemtoReg_i  (ID_EX.MemtoReg_o),
     .MemtoReg_o  (MEM_WB.MemtoReg_i)
 );
@@ -229,10 +233,10 @@ MEM_WB MEM_WB
     .mem_o       (MUX_MemtoReg.data2_i),
     .ALUResult_i (ALU_result),
     .ALUResult_o (MUX_MemtoReg.data1_i),
-    .RDaddr_i    (EX_MEM.RDaddr_o),
-    .RDaddr_o    (Registers.RDaddr_i),
-    .RegWrite_i  (EX_MEM.RegWrite_o),
-    .RegWrite_o  (Registers.RegWrite_i),
+    .RDaddr_i    (EX_MEM_RDaddr),
+    .RDaddr_o    (MEM_WB_RDaddr),
+    .RegWrite_i  (EX_MEM_RegWrite),
+    .RegWrite_o  (MEM_WB_RegWrite),
     .MemtoReg_i  (EX_MEM.MemtoReg_o),
     .MemtoReg_o  (MUX_MemtoReg.select_i)
 );
@@ -241,12 +245,12 @@ Forward Forward
 (
 	.ID_EX_RSaddr_i    (ID_EX.RSaddr_o),
 	.ID_EX_RTaddr_i    (ID_EX.RTaddr_o),
-	.EX_MEM_RDaddr_i   (),
-	.MEM_WB_RDaddr_i   (),
-	.EX_MEM_RegWrite_i (),
-	.MEM_WB_RegWrite_i (),
-	.select1_o         (),
-	.select2_o         ()
+	.EX_MEM_RDaddr_i   (EX_MEM_RDaddr),
+	.MEM_WB_RDaddr_i   (MEM_WB_RDaddr),
+	.EX_MEM_RegWrite_i (EX_MEM_RegWrite),
+	.MEM_WB_RegWrite_i (MEM_WB_RegWrite),
+	.select1_o         (MUX_ALU_data1.select_i),
+	.select2_o         (MUX_ALU_data2.select_i)
 );
 
 endmodule
