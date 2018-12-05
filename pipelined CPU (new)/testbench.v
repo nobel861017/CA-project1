@@ -67,8 +67,7 @@ always@(posedge Clk) begin
     // if(CPU.HazzardDetection.Flush_o == 1)flush = flush + 1;  
 
     // print PC
-    $fdisplay(outfile, "cycle = %d, Start = %d, Stall = %d, Flush = %d\nPC = %d, inst_addr = %d", counter, Start, stall, flush, CPU.PC.pc_o, CPU.inst_addr);
-    $fdisplay(outfile, "MUX_PC.data1_i = %d, MUX_PC.data2_i = %d, MUX_PC.select_i = %d, MUX_PC.data_o = %d", CPU.MUX_PC.data1_i, CPU.MUX_PC.data2_i, CPU.MUX_PC.select_i, CPU.MUX_PC.data_o);
+    $fdisplay(outfile, "cycle = %d, Start = %d, Stall = %d, Flush = %d\nPC = %d", counter, Start, stall, flush, CPU.PC.pc_o);
     
     // print Registers
     $fdisplay(outfile, "Registers");

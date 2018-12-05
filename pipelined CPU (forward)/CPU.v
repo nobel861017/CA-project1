@@ -15,9 +15,10 @@ wire [31 : 0] inst_addr;
 wire          branch;
 wire          zero;
 wire          taken;
-wire [31 : 0] RTdata;
 wire [31 : 0] imm;
 wire [31 : 0] ALU_result;
+wire [31 : 0] RTdata;
+wire [31 : 0] RDdata;
 wire [4 : 0]  EX_MEM_RDaddr;
 wire [4 : 0]  MEM_WB_RDaddr;
 wire          EX_MEM_RegWrite;
@@ -92,7 +93,7 @@ Registers Registers
     .RSaddr_i   (inst[19 : 15]),
     .RTaddr_i   (inst[24 : 20]),
     .RDaddr_i   (MEM_WB_RDaddr), 
-    .RDdata_i   (MUX_MemtoReg.data_o),
+    .RDdata_i   (RDdata),
     .RegWrite_i (MEM_WB_RegWrite), 
     .RSdata_o   (ID_EX.RSdata_i),
     .RTdata_o   (ID_EX.RTdata_i) 
@@ -106,20 +107,20 @@ Sign_Extend Sign_Extend
 
 MUX3 MUX_ALU_data1
 (
-	.data1_i  (),
-	.data2_i  (),
-	.data3_i  (),
-	.select_i (),
-	.data_o   ()
+	.data1_i  (ID_EX.RSdata_o),
+	.data2_i  (RDdata),
+	.data3_i  (ALU_result),
+	.select_i (Forward.select1_o),
+	.data_o   (ALU.data1_i)
 );
 
 MUX3 MUX_ALU_data2
 (
-	.data1_i  (),
-	.data2_i  (),
-	.data3_i  (),
-	.select_i (),
-	.data_o   ()
+	.data1_i  (ID_EX.RTdata_o),
+	.data2_i  (RDdata),
+	.data3_i  (ALU_result),
+	.select_i (Forward.select2_o),
+	.data_o   (RTdata)
 );
 
 MUX32 MUX_ALUSrc
@@ -132,7 +133,7 @@ MUX32 MUX_ALUSrc
 
 ALU ALU
 (
-    .data1_i    (ID_EX.RSdata_o),
+    .data1_i    (MUX_ALU_data1.data_o),
     .data2_i    (MUX_ALUSrc.data_o),
     .ALUCtrl_i  (ALU_Control.ALUCtrl_o),
     .data_o     (EX_MEM.ALUResult_i),
@@ -154,7 +155,7 @@ MUX32 MUX_MemtoReg
     .data1_i    (MEM_WB.ALUResult_o),
     .data2_i    (MEM_WB.mem_o),
     .select_i   (MEM_WB.MemtoReg_o),
-    .data_o     (Registers.RDdata_i)
+    .data_o     (RDdata)
 );
 
 IF_ID IF_ID
@@ -174,9 +175,9 @@ ID_EX ID_EX
     .inst_i     (inst),
     .inst_o     (ALU_Control.funct_i),
     .RSdata_i   (Registers.RSdata_o),
-    .RSdata_o   (ALU.data1_i),
+    .RSdata_o   (MUX_ALU_data1.data1_i),
     .RTdata_i   (Registers.RTdata_o),
-    .RTdata_o   (RTdata),
+    .RTdata_o   (MUX_ALU_data2.data1_i),
     .imm_i      (Sign_Extend.data_o),
     .imm_o      (imm),
     .RSaddr_i   (inst[19 : 15]),
