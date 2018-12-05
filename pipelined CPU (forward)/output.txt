@@ -229,7 +229,7 @@ R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =      
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -246,12 +246,12 @@ MUX_PC.data1_i =         48, MUX_PC.data2_i =         44, MUX_PC.select_i = 1, M
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
 R1(at) =          0, R9 (t1) =         10, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =         13, R18(s2) =          0, R26(k0) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
 R3(v1) =          0, R11(t3) =          0, R19(s3) =          0, R27(k1) =          0
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -268,12 +268,12 @@ MUX_PC.data1_i =         48, MUX_PC.data2_i =         38, MUX_PC.select_i = 0, M
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
 R1(at) =          0, R9 (t1) =         10, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =         13, R18(s2) =          0, R26(k0) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
 R3(v1) =          0, R11(t3) =        100, R19(s3) =          0, R27(k1) =          0
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -290,12 +290,12 @@ MUX_PC.data1_i =         52, MUX_PC.data2_i =         42, MUX_PC.select_i = 0, M
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
 R1(at) =          0, R9 (t1) =         10, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =         13, R18(s2) =          0, R26(k0) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
 R3(v1) =          0, R11(t3) =        100, R19(s3) =          0, R27(k1) =          0
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -311,13 +311,13 @@ PC =         52, inst_addr =         52
 MUX_PC.data1_i =         56, MUX_PC.data2_i =         46, MUX_PC.select_i = 0, MUX_PC.data_o =         56
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =         13, R18(s2) =          0, R26(k0) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
 R3(v1) =          0, R11(t3) =        100, R19(s3) =          0, R27(k1) =          0
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -333,13 +333,13 @@ PC =         56, inst_addr =         56
 MUX_PC.data1_i =         60, MUX_PC.data2_i =         46, MUX_PC.select_i = 0, MUX_PC.data_o =         60
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =         13, R18(s2) =          0, R26(k0) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          0, R18(s2) =          0, R26(k0) =          0
 R3(v1) =          0, R11(t3) =        100, R19(s3) =          0, R27(k1) =          0
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -355,13 +355,13 @@ PC =         60, inst_addr =         60
 MUX_PC.data1_i =         64, MUX_PC.data2_i =         50, MUX_PC.select_i = 0, MUX_PC.data_o =         64
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
 R3(v1) =          0, R11(t3) =        100, R19(s3) =          0, R27(k1) =          0
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -377,13 +377,13 @@ PC =         64, inst_addr =         64
 MUX_PC.data1_i =         68, MUX_PC.data2_i =         54, MUX_PC.select_i = 0, MUX_PC.data_o =         68
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
 R3(v1) =          0, R11(t3) =        100, R19(s3) =          0, R27(k1) =          0
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -399,13 +399,13 @@ PC =         68, inst_addr =         68
 MUX_PC.data1_i =         72, MUX_PC.data2_i =         58, MUX_PC.select_i = 0, MUX_PC.data_o =         72
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
 R4(a0) =          0, R12(t4) =          0, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -421,13 +421,13 @@ PC =         72, inst_addr =         72
 MUX_PC.data1_i =         76, MUX_PC.data2_i =         62, MUX_PC.select_i = 0, MUX_PC.data_o =         76
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -443,13 +443,13 @@ PC =         76, inst_addr =         76
 MUX_PC.data1_i =         80, MUX_PC.data2_i =         66, MUX_PC.select_i = 0, MUX_PC.data_o =         80
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -465,13 +465,13 @@ PC =         80, inst_addr =         80
 MUX_PC.data1_i =         84, MUX_PC.data2_i =         70, MUX_PC.select_i = 0, MUX_PC.data_o =         84
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -487,13 +487,13 @@ PC =         84, inst_addr =         84
 MUX_PC.data1_i =         88, MUX_PC.data2_i =         74, MUX_PC.select_i = 0, MUX_PC.data_o =         88
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -509,13 +509,13 @@ PC =         88, inst_addr =         88
 MUX_PC.data1_i =         92, MUX_PC.data2_i =         78, MUX_PC.select_i = 0, MUX_PC.data_o =         92
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -531,13 +531,13 @@ PC =         92, inst_addr =         92
 MUX_PC.data1_i =         96, MUX_PC.data2_i =         82, MUX_PC.select_i = 0, MUX_PC.data_o =         96
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -553,13 +553,13 @@ PC =         96, inst_addr =         96
 MUX_PC.data1_i =        100, MUX_PC.data2_i =         86, MUX_PC.select_i = 0, MUX_PC.data_o =        100
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -575,13 +575,13 @@ PC =        100, inst_addr =        100
 MUX_PC.data1_i =        104, MUX_PC.data2_i =         90, MUX_PC.select_i = 0, MUX_PC.data_o =        104
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -597,13 +597,13 @@ PC =        104, inst_addr =        104
 MUX_PC.data1_i =        108, MUX_PC.data2_i =         94, MUX_PC.select_i = 0, MUX_PC.data_o =        108
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -619,13 +619,13 @@ PC =        108, inst_addr =        108
 MUX_PC.data1_i =        112, MUX_PC.data2_i =         98, MUX_PC.select_i = 0, MUX_PC.data_o =        112
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
@@ -641,13 +641,13 @@ PC =        112, inst_addr =        112
 MUX_PC.data1_i =        116, MUX_PC.data2_i =        102, MUX_PC.select_i = 0, MUX_PC.data_o =        116
 Registers
 R0(r0) =          0, R8 (t0) =          0, R16(s0) =          0, R24(t8) =          0
-R1(at) =          0, R9 (t1) =         11, R17(s1) =          0, R25(t9) =          0
-R2(v0) =          0, R10(t2) =          3, R18(s2) =          0, R26(k0) =          0
-R3(v1) =          0, R11(t3) =          9, R19(s3) =          0, R27(k1) =          0
-R4(a0) =          0, R12(t4) =        109, R20(s4) =          0, R28(gp) =          0
+R1(at) =          0, R9 (t1) =          x, R17(s1) =          0, R25(t9) =          0
+R2(v0) =          0, R10(t2) =          x, R18(s2) =          0, R26(k0) =          0
+R3(v1) =          0, R11(t3) =          x, R19(s3) =          0, R27(k1) =          0
+R4(a0) =          0, R12(t4) =          x, R20(s4) =          0, R28(gp) =          0
 R5(a1) =          0, R13(t5) =          0, R21(s5) =          0, R29(sp) =          0
 R6(a2) =          0, R14(t6) =          0, R22(s6) =          0, R30(s8) =          0
-R7(a3) =          0, R15(t7) =         10, R23(s7) =          0, R31(ra) =          0
+R7(a3) =          0, R15(t7) =          x, R23(s7) =          0, R31(ra) =          0
 Data Memory: 0x00 =          0
 Data Memory: 0x04 =          0
 Data Memory: 0x08 =          0
